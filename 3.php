@@ -1,5 +1,5 @@
 <?php
-function mostrecent($text)
+function mostrecent(string $text): string
 {
     preg_match_all('/\b\p{L}+\b/u', strtolower($text), $matches);
     $words = $matches[0];

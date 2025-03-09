@@ -1,5 +1,5 @@
 <?php
-function isperfectnumber($number)
+function isperfectnumber(int $number): bool
 {
     if ($number < 2) {
         return false;
@@ -15,7 +15,8 @@ function isperfectnumber($number)
     }
     return $sum == $number;
 }
-function findperfectnumber($array)
+
+function findperfectnumber(array $array): ?int
 {
     foreach ($array as $number) {
         if (isperfectnumber($number)) {
@@ -24,6 +25,7 @@ function findperfectnumber($array)
     }
     return null;
 }
+
 $array = [6, 12, 28, 496, 8128, 33550336, 123, 456];
 $perfectnumber = findperfectnumber($array);
 if ($perfectnumber !== null) {
